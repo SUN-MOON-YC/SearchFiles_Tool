@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'search_by_keyStr.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap,QBrush
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(733, 608)
+        MainWindow.setMinimumSize(QtCore.QSize(733, 608))
+        MainWindow.setMaximumSize(QtCore.QSize(733, 608))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("images/search.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        # 设置窗体背景
+        palette = QtGui.QPalette ()
+        # 设置窗体背景自适应
+        palette.setBrush (MainWindow.backgroundRole (), QBrush (
+            QPixmap ("images/snow.jpg").scaled (
+                MainWindow.size (),
+                QtCore.Qt.IgnoreAspectRatio,
+                QtCore.Qt.SmoothTransformation)))
+        MainWindow.setPalette (palette)
+        MainWindow.setAutoFillBackground (True)
+
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label_sourcePath = QtWidgets.QLabel(self.centralwidget)
+        self.label_sourcePath.setGeometry(QtCore.QRect(90, 30, 171, 16))
+        self.label_sourcePath.setObjectName("label_sourcePath")
+        self.lineEdit_sourcePath = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_sourcePath.setGeometry(QtCore.QRect(230, 30, 291, 20))
+        self.lineEdit_sourcePath.setObjectName("lineEdit_sourcePath")
+        self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(230, 50, 291, 61))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.checkBox_C = QtWidgets.QCheckBox(self.horizontalLayoutWidget)
+        self.checkBox_C.setObjectName("checkBox_C")
+        self.horizontalLayout.addWidget(self.checkBox_C)
+        self.checkBox_D = QtWidgets.QCheckBox(self.horizontalLayoutWidget)
+        self.checkBox_D.setObjectName("checkBox_D")
+        self.horizontalLayout.addWidget(self.checkBox_D)
+        self.checkBox_E = QtWidgets.QCheckBox(self.horizontalLayoutWidget)
+        self.checkBox_E.setObjectName("checkBox_E")
+        self.horizontalLayout.addWidget(self.checkBox_E)
+        self.pushButton_selectSourcePath = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_selectSourcePath.setGeometry(QtCore.QRect(550, 30, 75, 23))
+        self.pushButton_selectSourcePath.setObjectName("pushButton_selectSourcePath")
+        self.label_displyFindNum = QtWidgets.QLabel(self.centralwidget)
+        self.label_displyFindNum.setGeometry(QtCore.QRect(260, 250, 181, 16))
+        self.label_displyFindNum.setObjectName("label_displyFindNum")
+        self.lineEdit_TargetPath = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_TargetPath.setGeometry(QtCore.QRect(220, 490, 291, 20))
+        self.lineEdit_TargetPath.setObjectName("lineEdit_TargetPath")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(80, 490, 171, 16))
+        self.label_4.setObjectName("label_4")
+        self.pushButton_selectTargetPath = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_selectTargetPath.setGeometry(QtCore.QRect(540, 490, 75, 23))
+        self.pushButton_selectTargetPath.setObjectName("pushButton_selectTargetPath")
+        self.pushButton_search = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_search.setGeometry(QtCore.QRect(100, 250, 75, 23))
+        self.pushButton_search.setObjectName("pushButton_search")
+        self.pushButton_copy = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_copy.setGeometry(QtCore.QRect(90, 530, 75, 23))
+        self.pushButton_copy.setObjectName("pushButton_copy")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(90, 120, 181, 16))
+        self.label_5.setObjectName("label_5")
+        self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
+        self.scrollArea.setGeometry(QtCore.QRect(90, 280, 561, 201))
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 559, 199))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.textBrowser = QtWidgets.QTextBrowser(self.scrollAreaWidgetContents)
+        self.textBrowser.setGeometry(QtCore.QRect(0, 0, 561, 201))
+        self.textBrowser.setObjectName("textBrowser")
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.label_DisplayCopyStatus = QtWidgets.QLabel(self.centralwidget)
+        self.label_DisplayCopyStatus.setGeometry(QtCore.QRect(220, 530, 181, 16))
+        self.label_DisplayCopyStatus.setObjectName("label_DisplayCopyStatus")
+        self.formLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.formLayoutWidget.setGeometry(QtCore.QRect(230, 140, 301, 81))
+        self.formLayoutWidget.setObjectName("formLayoutWidget")
+        self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
+        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
+        self.lineEdit = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit)
+        self.label_2 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
+        self.label_3 = QtWidgets.QLabel(self.formLayoutWidget)
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit_3)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 733, 23))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "通过关键字查询并复制文件"))
+        self.label_sourcePath.setText(_translate("MainWindow", "文件可能存放的路径："))
+        self.checkBox_C.setText(_translate("MainWindow", "C:/"))
+        self.checkBox_D.setText(_translate("MainWindow", "D:/"))
+        self.checkBox_E.setText(_translate("MainWindow", "E:/"))
+        self.pushButton_selectSourcePath.setText(_translate("MainWindow", "浏览"))
+        self.label_displyFindNum.setText(_translate("MainWindow", "此处显示查找到文件的数量"))
+        self.label_4.setText(_translate("MainWindow", "复制文件到指定路径："))
+        self.pushButton_selectTargetPath.setText(_translate("MainWindow", "选择"))
+        self.pushButton_search.setText(_translate("MainWindow", "开始查找"))
+        self.pushButton_copy.setText(_translate("MainWindow", "开始复制"))
+        self.label_5.setText(_translate("MainWindow", "文件包含关键字："))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.label_DisplayCopyStatus.setText(_translate("MainWindow", "此处显示文件复制的最终状态"))
+        self.label.setText(_translate("MainWindow", "关键字1"))
+        self.label_2.setText(_translate("MainWindow", "关键字2"))
+        self.label_3.setText(_translate("MainWindow", "关键字3"))
+
